@@ -1,0 +1,313 @@
+@import url('reset.css');
+
+body {
+	font: normal 14px Helvetica;
+  width: 990px;
+  margin: 0 auto;
+  border: 1px solid #dddddd;
+  border-top: none;
+  color: #333;
+}
+a {
+  text-decoration: none;
+  color: #001be1;
+}
+/* ************************************* */
+/* header */
+/* ************************************* */
+header {
+  height: 230px;
+}
+header * {
+  box-sizing: border-box;
+}
+#banner {
+  height: 24px;
+  background: #ba132e url('http://cdn.oreillystatic.com/radar/images/oreilly_logo_white.png') 27px 6px no-repeat;
+}
+#title {
+  display: inline-block;
+  height: 100px;
+  width: 490px;
+  background: url("http://cdn.oreillystatic.com/radar/images/radar_tagline.png") 27px 23px no-repeat;
+}
+.wrapper {
+  display: inline-block;
+}
+.header-title {
+  width: 100%;
+}
+.social-media-search {
+  float: right;
+  width: 480px 
+}
+.social-media-search ul {
+  width: 480px;
+  text-align: right;
+  padding: 17px 16px 0 0;
+}
+.social-media-search li {
+  display: inline-block;
+  text-indent: 9999px;
+  height: 24px;
+  width: 24px;
+  background: url("http://cdn.oreillystatic.com/radar/images/update-icons-062014.png") 0 0 no-repeat;
+}
+ul li#twitter {
+  background-position: -28px 0;
+  margin-left: 1px;
+}
+ul li#facebook {
+  background-position: -56px 0;
+  margin-left: 1px;
+}
+ul li#google-plus {
+  background-position: -84px 0;
+}
+ul li#youtube {
+  background-position: -112px 0;
+  margin-right: -1px;
+}
+header form {
+  float: right;
+  padding: 11px 16px 0 0;
+}
+header fieldset {
+  float: left;
+}
+header input[type="text"] {
+  width: 218px;
+  height: 26px;
+  font-size: 12px;
+  letter-spacing: -0.3px;
+  color: #9f9999;
+  padding-left: 2px;
+  border: 1px solid #c5c5c5;
+  border-right: 0;
+  background: #f9f9f9;
+}
+header input[type="submit"] {
+  float: right;
+  width: 26px;
+  height: 26px;
+  border: none;
+  color: transparent;
+  background: url("http://cdn.oreillystatic.com/images/sitewide-headers/search_btn.gif") 0 0 no-repeat;
+}
+#menu * {
+  box-sizing: content-box;
+}
+#menu ul {
+  height: 33px;
+  background: linear-gradient( #fbfbfb, #eeeeee );
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+#menu li {
+  display: inline-block;
+  border-right: 1px solid #ddd;
+  height: inherit;
+  padding: 0 15px 0 15px;
+  font-size: 13px;
+  line-height: 280%;
+}
+#menu-selected {
+  background: #fff;
+  color: #900;
+  border-bottom: transparent;
+}
+#topics ul {
+  margin-left: 14px;
+}
+#topics li {
+  display: inline-block;
+  font-size: 18px;
+  color: #777;
+  padding: 30px 10px 4px 10px;
+  border-bottom: 4px solid #bbb;
+  margin-left: 6px;
+}
+/* ************************************* */
+/* main */
+/* ************************************* */
+main {
+  margin: 17px 17px 0 20px;
+}
+main h2 {
+  font-size: 22px;
+  color: #001be1;
+  padding-top: 15px;
+  padding-bottom: 0;
+}
+h2 a:hover {
+  text-decoration: underline;
+}
+h2 a:visited {
+  color: inherit;
+}
+main h3, h4 {
+  text-transform: uppercase;
+  color: #900; 
+  border-bottom: 1px solid #ccc;
+}
+main h3 {
+  padding-bottom: 1px;
+}
+main h4 {
+  font-size: 13.1px;
+  margin-top: -2px;
+  padding-bottom: 4.2px;
+}
+main h5 {
+  font-size: 18px; 
+  line-height: 24px;
+  color: #000;
+  padding-top: 14px;
+}
+/* ************************************* */
+/* article */
+/* ************************************* */
+article {
+  float: left;
+  width: 66%;
+  box-sizing: border-box;
+  padding-right: 14px;
+}
+p {
+  padding-top: 14px;
+  font-size: 15px;
+  line-height: 20px;
+}
+/* ************************************* */
+/* article section */
+/* ************************************* */
+article ul {
+  font-size: 15px;
+  padding: 14px 0 30px 0;
+  margin-left: 5px;
+  line-height: 134%;
+}
+article li {
+  max-width: 500px;
+}
+article li:before {
+  content: '\25AA';
+  font-size: 17.1px;
+  vertical-align: -1px;
+  padding-right: 9px;
+}
+#section-social-media {
+  color: #8c8c8c;
+  padding-bottom: 12px;
+}
+section#featured {
+  margin-top: 0;
+  border-bottom: 4px solid #ccc;
+}
+section#featured h2 {
+  margin-left: 0;
+  margin-top: 0;
+}
+section {
+  border-bottom: 1px solid #ccc;
+}
+section h2 {
+  margin-left: 67px;
+  margin-top: 10px;
+}
+.article-intro {
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 125%;
+  padding-left: 67px;
+  /* padding-top: 2px; */
+}
+.author-contact {
+  display: inline-block;
+  font-size: 12px;
+  color: #666;
+  padding-left: 67px;
+  margin-top: 5px;
+}
+.blog-intro {
+  width: 594px;
+}
+.blog-intro img {
+  padding-top: 20px;
+  padding-left: 26px;
+  float: right;
+}
+#mike_loukides {
+  background: url("http://cdn.oreillystatic.com/radar/images/people/photo_mikel_s.jpg") 0 0 no-repeat;
+}
+/* ************************************* */
+/* aside */
+/* ************************************* */
+aside {
+  float: right;
+  width: 320px; 
+  box-sizing: border-box;
+}
+select {
+    display: block;
+    font-size: 12px;
+    letter-spacing: -0.4px;
+    line-height: 140%;
+    margin-top: 10px;
+    padding: 0 19px 0 3px;
+    border: 1px solid #ccc;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+select[name="archives-topic"] {
+  padding-right: 21px;
+}
+select[name="archives-author"] {
+  padding-right: 84px;
+  margin-bottom: 24px;
+}
+.help {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 130%;
+  font-weight: bold;
+  padding-top: 10px;
+}
+/* ************************************* */
+/* footer */
+/* ************************************* */
+footer {
+  height: 310px;
+  clear: both;
+}
+/* ************************************* */
+/* media queries */
+/* ************************************* */
+
+/* default */
+/*   max-width: 990px; */
+/*   no dropdowns */
+/*   fixedwidth archives sidebar */
+/*     sidebar hold space down the entire side of the page */
+
+/* less than 950 */
+/*   hamburger menu fullscreen dropdown */ 
+/*   topics dropdown fixed width */  
+/*   fixedwidth archives sidebar */
+/*     sidebar hold space down the entire side of the page */
+
+/* less than 768 */
+/*   same hamburger menu fullscreen dropdown */
+/*   topics dropwdown full width */ 
+/*   Radar header is smaller font */
+/*   social media pushed below Radar header */
+
+/*   articles take of full width of the page */
+
+/*   footer is single column */
+/*   archives sidebar moves above the footer */
+  
+  
