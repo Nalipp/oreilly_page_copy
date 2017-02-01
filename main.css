@@ -12,6 +12,9 @@ a {
   text-decoration: none;
   color: #001be1;
 }
+a:hover {
+  text-decoration: underline;
+}
 /* ************************************* */
 /* header */
 /* ************************************* */
@@ -101,7 +104,6 @@ header input[type="submit"] {
   height: 33px;
   background: linear-gradient( #fbfbfb, #eeeeee );
   border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
 }
 #menu li {
   display: inline-block;
@@ -110,11 +112,12 @@ header input[type="submit"] {
   padding: 0 15px 0 15px;
   font-size: 13px;
   line-height: 280%;
+  border-bottom: 1px solid #ddd;
 }
-#menu-selected {
+li#menu-selected {
   background: #fff;
   color: #900;
-  border-bottom: transparent;
+  border-bottom: none;
 }
 #topics ul {
   margin-left: 14px;
@@ -136,7 +139,7 @@ main {
 main h2 {
   font-size: 22px;
   color: #001be1;
-  padding-top: 15px;
+  padding-top: 15.5px;
   padding-bottom: 0;
 }
 h2 a:hover {
@@ -196,9 +199,8 @@ article li:before {
   vertical-align: -1px;
   padding-right: 9px;
 }
-#section-social-media {
-  color: #8c8c8c;
-  padding-bottom: 12px;
+section#featured #section-social-media {
+  padding-top: 0;
 }
 section#featured {
   margin-top: 0;
@@ -207,6 +209,9 @@ section#featured {
 section#featured h2 {
   margin-left: 0;
   margin-top: 0;
+}
+section#featured ul {
+  padding: 14px 0 14px 0;
 }
 section {
   border-bottom: 1px solid #ccc;
@@ -221,7 +226,7 @@ section h2 {
   font-weight: bold;
   line-height: 125%;
   padding-left: 67px;
-  /* padding-top: 2px; */
+  padding-top: 4px;
 }
 .author-contact {
   display: inline-block;
@@ -230,16 +235,97 @@ section h2 {
   padding-left: 67px;
   margin-top: 5px;
 }
-.blog-intro {
+.blog-preview {
   width: 594px;
 }
-.blog-intro img {
-  padding-top: 20px;
-  padding-left: 26px;
+a.full-blog-link {
+  diaplay: inline-block;
+  font-size: 15px;
+  line-height: 130%;
+  font-weight: bold;
+}
+.blog-link-paragraph {
+  padding-top: 0;
+}
+section .section-social-media {
+  color: #8c8c8c;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.editor-note {
+  font-size: 15px;
+  font-style: italic;
+}
+.blog-preview .full-width img {
+  padding-top: 26px;
+  width: 100%;
+}
+.blog-preview .float-right img {
   float: right;
+  padding-top: 16px;
+  padding-left: 26px;
+}
+.blog-preview li {
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+.blog-preview ul {
+  padding-bottom: 0;
+}
+.numbered-list {
+  margin-left: 20px;
+}
+.numbered-list li {
+  max-width: none;
+  list-style: decimal; 
+  padding-left: 0;
+}
+.numbered-list li:before {
+  content: "";
+  padding-right: 0;
+}
+.bold {
+  font-weight: bold;
+}
+figcaption {
+  text-align: center;
+  font-size: 15px;
+  font-style: italic;
+  line-height: 140%;
+  padding-top: 10px;
+  padding-bottom: 6px;
+}
+blockquote {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 115%;
+  padding-top: 14px;
 }
 #mike_loukides {
-  background: url("http://cdn.oreillystatic.com/radar/images/people/photo_mikel_s.jpg") 0 0 no-repeat;
+  background: url("http://cdn.oreillystatic.com/radar/images/people/photo_mikel_s.jpg") 0 16px no-repeat;
+}
+#tyler_akidau {
+  background: url("http://cdn.oreillystatic.com/radar/images/people/photo_tylera_s.jpg") 0 16px no-repeat;
+}
+#stefan_thies {
+  background: url("http://cdn.oreillystatic.com/radar/images/people/photo_sthies_s.jpg") 0 16px no-repeat;
+}
+#stefan_thies img {
+  padding-top: 14px;
+}
+#william_mougayar {
+  background: url("http://cdn.oreillystatic.com/radar/images/people/photo_wmougayar_s.jpg") 0 16px no-repeat;
+}
+#benjamin_hindman {
+  background: url("http://cdn.oreillystatic.com/radar/images/people/photo_bhindman_s.jpg") 0 16px no-repeat;
+}
+#andy_oram {
+  background: url("http://cdn.oreillystatic.com/radar/images/people/photo_andyo_s.jpg") 0 16px no-repeat;
+}
+#older-post {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 20px 0;
 }
 /* ************************************* */
 /* aside */
@@ -281,7 +367,84 @@ select[name="archives-author"] {
 /* ************************************* */
 footer {
   height: 310px;
+  border: 1px solid #ddd;
+  padding-top: 12px;
+  box-sizing: border-box;
   clear: both;
+}
+#footer-banner {
+  width: 100%;
+  background: #9a0d00;
+}
+#footer-banner:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+#footer-banner ul {
+  padding-top: 10px;
+  height: 38px;
+}
+#footer-banner li {
+  float: right;
+  height: 22px;
+  width: 22px;
+  text-indent: -9999px;
+  margin-left: 2px;
+  background: #9a0d00 url('http://cdn.oreillystatic.com/radar/images/social-icons.png') 0 -20px no-repeat;
+}
+#footer-banner ul li:first-child {
+  width: 132px;
+  text-indent: 0;
+  font-size: 11px;
+  padding-top: 6px;
+  color: #efffff;
+  background: #9a0d00;
+}
+#footer-banner #footer-rss {
+  background-position: -110px -20px;
+}
+#footer-banner #footer-googleplus {
+  background-position: -132px -20px;
+}
+#footer-banner #footer-twitter {
+  background-position: -66px -20px;
+}
+#footer-banner #footer-facebook {
+  background-position: -44px -20px;
+}
+#footer-banner #footer-friendship {
+  background-position: -22px -20px;
+}
+#legal-contact {
+  display: inline-block;
+  width: 240px;
+  margin: 13px 0 0 11px;
+}
+#legal-contact p {
+  font-size: 12px;
+  font-weight: bold;
+  padding-top: 0;
+  line-height: 17px;
+}
+#legal-contact p:last-child {
+  font-weight: normal;
+  padding-top: 9px;
+  line-height: 130%;
+}
+table {
+  float: right;
+  width: 730px;
+  padding: 14px 0 0 36px;
+  font-size: 12px;
+  text-align: left
+}
+table th, table td {
+  line-height: 130%;
+  padding-left: 22px;
+}
+table th {
+  padding-bottom: 4px;
 }
 /* ************************************* */
 /* media queries */
