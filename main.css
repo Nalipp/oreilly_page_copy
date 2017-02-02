@@ -2,7 +2,7 @@
 
 body {
 	font: normal 14px Helvetica;
-  width: 990px;
+  max-width: 990px;
   margin: 0 auto;
   border: 1px solid #dddddd;
   border-top: none;
@@ -42,10 +42,9 @@ header * {
 }
 .social-media-search {
   float: right;
-  width: 480px 
+  width: 300px 
 }
 .social-media-search ul {
-  width: 480px;
   text-align: right;
   padding: 17px 16px 0 0;
 }
@@ -449,6 +448,14 @@ table th {
 /* ************************************* */
 /* media queries */
 /* ************************************* */
+@media (max-width: 950px) {
+  body {
+  }
+  aside {
+    float: right;
+    width: 300px; 
+  }  
+}
 
 /* default */
 /*   max-width: 990px; */

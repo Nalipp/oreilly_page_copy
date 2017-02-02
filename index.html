@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width">
-		<title></title>
-		<link rel="stylesheet" href="main.css"> 
-    <script src="https://use.fontawesome.com/77b0562017.js"></script>
-	</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <title>O'Reilly Radar - Insight, Analysis and Research</title>
+    <link rel="stylesheet" href="main.css"> 
+  </head>
 	<body>
     <header>
       <div id="banner"></div>
@@ -51,8 +50,8 @@
     </header>
     <main>
       <article>
+        <h3>featured story</h3>
         <section id="featured">
-          <h3>featured story</h3>
           <h2><a href="">Radar has moved to oreilly.com/ideas</a></h2>
           <p>All of the material you’re used to finding on Radar has now moved to <a href="">oreilly.com/ideas</a>.</p>
           <p>New editions of Four Short Links are available at <a href="">oreilly.com/4sl.</a></p>
@@ -159,7 +158,6 @@
               <li>Processing data as they arrive spreads workloads out more evenly over time, yielding more consistent and predictable consumption of resources.</li>
             </ul>
             <p>Despite this business-driven surge of interest in streaming, the majority of streaming systems in existence remain relatively immature compared to their batch brethren, which has resulted in a lot of exciting, active development in the space recently.</p>
-
             <p>As someone who’s worked on massive-scale streaming systems at Google for the last five+ years (<a href="">MillWheel, Cloud Dataflow</a>), I’m delighted by this streaming zeitgeist, to say the least. I’m also interested in making sure that folks understand everything that streaming systems are capable of and how they are best put to use, particularly given the semantic gap that remains between most existing batch and streaming systems. To that end, the fine folks at O’Reilly have invited me to contribute a written rendition of my<a href="">Say Goodbye to Batch</a> talk from <a href="">Strata + Hadoop World London 2015</a>. Since I have quite a bit to cover, I’ll be splitting this across two separate posts:</p>
             <ul class="numbered-list">
               <li><span class="bold">Streaming 101</span>: This first post will cover some basic background information and clarify some terminology before diving into details about time domains and a high-level overview of common approaches to data processing, both batch and streaming.</li>
@@ -181,10 +179,8 @@
           <span class="author-contact">by <a href="">Stefan Thies</a> |	<a href="">@sematext</a> | <a href="">+Stefan Thies</a> | April 28, 2015</span>
           <div class="blog-preview">
             <p>Elasticsearch is booming. Together with Logstash, a tool for collecting and processing logs, and Kibana, a tool for searching and visualizing data in Elasticsearch (aka, the “ELK” stack), adoption of Elasticsearch continues to <a href="">grow by leaps and bounds</a>. When it comes to actually using Elasticsearch, there are tons of metrics generated. Instead of taking on the formidable task of tackling all-things-metrics in one blog post, I’ll take a look at 10 Elasticsearch metrics to watch. This should be helpful to anyone new to Elasticsearch, and also to experienced users who want a quick start into performance monitoring of Elasticsearch.</p>
-
-<p>Most of the charts in this piece group metrics either by displaying multiple metrics in one chart, or by organizing them into dashboards. This is done to provide context for each of the metrics we’re exploring.</p>
-
-<p>To start, here’s a dashboard view of the 10 Elasticsearch metrics we’re going to discuss:</p>
+            <p>Most of the charts in this piece group metrics either by displaying multiple metrics in one chart, or by organizing them into dashboards. This is done to provide context for each of the metrics we’re exploring.</p>
+            <p>To start, here’s a dashboard view of the 10 Elasticsearch metrics we’re going to discuss:</p>
           <div class="full-width">
             <figure>
               <img src="http://radar.oreilly.com/wp-files/2/2015/04/spm_dashboard-620x223.png" alt="screenshot of various metrics">
@@ -208,7 +204,6 @@
           <p class="article-intro">We must be prepared for the blockchain’s promise to become a new development environment.</p>
           <span class="author-contact">by <a href="">William Mougayar</a> |	<a href="">@wmougayar</a> | <a href="">+William Mougayar</a> | January 16, 2015</span>
           <div class="blog-preview">
-            <img src="" alt="">
             <p class="editor-note">Editor’s note: this post originally published on the author’s website in three pieces: "<a href="">The Blockchain is the New Database, Get Ready to Rewrite Everything,</a>” “<a href="">Blockchain Apps: Moving from the Jungle to the Zoo</a>,” and “<a href="">It’s Too Early to Judge Network Effects in Bitcoin and the Blockchain.</a>” He has revised and adapted those pieces for this post.</p>
             <p>There is no doubt that we are moving from a single cryptocurrency focus (bitcoin) to a variety of cryptocurrency-based applications built on top of the blockchain.</p>
             <p>This article examines the impact of the blockchain on developers, the segmentation of blockchain applications, and the network effects factors affecting bitcoin and blockchains.</p>
@@ -234,7 +229,7 @@
             </div>
             <p>Developers today are building a new class of applications. These applications no longer fit on a single server, but instead run across a fleet of servers in a data center. Examples include analytics frameworks like Apache Hadoop and Apache Spark, message brokers like Apache Kafka, key-value stores like Apache Cassandra, as well as customer-facing applications such as those run by Twitter and Netflix.</p>
 <p>These new applications are more than applications, they are distributed systems. Just as it became commonplace for developers to build multithreaded applications for single machines, it’s now becoming commonplace for developers to build distributed systems for data centers.</p>
-              <p>But it’s difficult for developers to build distributed systems, and it’s difficult for operators to run distributed systems. Why? Because we expose the wrong level of abstraction to both developers and operators: machines. <a href="" class="full-blog-link">Read more...</a></p> 
+            <p>But it’s difficult for developers to build distributed systems, and it’s difficult for operators to run distributed systems. Why? Because we expose the wrong level of abstraction to both developers and operators: machines. <a href="" class="full-blog-link">Read more...</a></p> 
             <div class="section-social-media">
               <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
               <i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i>
@@ -317,7 +312,7 @@
       </div>
       <div id="legal-contact">
         <p>© 2017, O'Reilly Media, Inc.</p>
-        <p>(707) 827-7019&nbsp &nbsp(800) 889-8969</p>
+        <p>(707) 827-7019&nbsp; &nbsp;(800) 889-8969</p>
         <p>All trademarks and registered trademarks appearing on oreilly.com are the property of their respective owners.</p>
       </div>
       <table> 
@@ -366,21 +361,34 @@
         <tr>
           <td>Press Room</td> 
           <td>RSS Feeds</td> 
+          <td></td>
+          <td></td>
         </tr>	
         <tr>
           <td>Privacy Policy</td> 
           <td>O’Reilly Chimera (beta)</td> 
+          <td></td>
+          <td></td>
         </tr>	
         <tr>
           <td>Terms of Service</td> 
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>	
         <tr>
           <td>Writing for O’Reilly</td> 
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>	
         <tr>
           <td>Editorial Independence</td> 
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>	
       </table>
     </footer>
-	</body>
+  </body>
 </html>
