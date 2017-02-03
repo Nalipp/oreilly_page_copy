@@ -26,6 +26,7 @@ header * {
 }
 #banner {
   height: 24px;
+  margin-top: -34px;
   background: #ba132e url('http://cdn.oreillystatic.com/radar/images/oreilly_logo_white.png') 27px 6px no-repeat;
 }
 #title {
@@ -96,30 +97,33 @@ header input[type="submit"] {
   color: transparent;
   background: url("http://cdn.oreillystatic.com/images/sitewide-headers/search_btn.gif") 0 0 no-repeat;
 }
-#menu * {
+#site-nav * {
   box-sizing: content-box;
 }
-#menu ul {
+#site-nav ul {
+  position: relative;
+  top: 128px;
+  width: 100%;
   height: 33px;
   background: linear-gradient( #fbfbfb, #eeeeee );
   border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
-#menu li {
+#site-nav li {
   display: inline-block;
   border-right: 1px solid #ddd;
   height: inherit;
   padding: 0 15px 0 15px;
   font-size: 13px;
   line-height: 280%;
-  border-bottom: 1px solid #ddd;
 }
-li#menu-selected {
+li#site-nav-selected {
   background: #fff;
   color: #900;
-  border-bottom: none;
+  border-bottom: 1px solid #fff;
 }
 #topics ul {
-  margin-left: 14px;
+  margin: 34px 0 0 14px;
 }
 #topics li {
   display: inline-block;
@@ -128,6 +132,10 @@ li#menu-selected {
   padding: 30px 10px 4px 10px;
   border-bottom: 4px solid #bbb;
   margin-left: 6px;
+}
+#topics #topics-hamburger {
+  position: absolute;
+  left: -9999px;
 }
 /* ************************************* */
 /* main */
@@ -340,18 +348,14 @@ select {
     letter-spacing: -0.4px;
     line-height: 140%;
     margin-top: 10px;
-    padding: 0 19px 0 3px;
     border: 1px solid #ccc;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    text-indent: 1px;
     text-overflow: '';
 }
 select[name="archives-topic"] {
-  padding-right: 21px;
+  width: 158px;
 }
 select[name="archives-author"] {
-  padding-right: 84px;
+  width: 200px;
   margin-bottom: 24px;
 }
 .help {
@@ -448,36 +452,148 @@ table th {
 /* ************************************* */
 /* media queries */
 /* ************************************* */
+
+input[type="checkbox"],
+label {
+  display: none;
+}
 @media (max-width: 950px) {
-  body {
+  label {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+    padding: 11px 0 10px 50px;
+    background: #555 url('http://cdn.oreillystatic.com/radar/images/menu-btn.png') 20px 8px no-repeat;
   }
-  aside {
-    float: right;
-    width: 300px; 
-  }  
+  input[type="checkbox"]:checked ~ header {
+    margin-top: 204px;
+  }
+  #site-nav {
+    width: 100%;
+    position: absolute;
+    top: 58px;
+  }
+  #site-nav ul {
+    display: none;
+    border-top: 1px solid #222;
+  }
+  input[type="checkbox"]:checked ~ header #site-nav ul {
+    top: -20px;
+    display: block;
+    width: 100%
+  }
+  input[type="checkbox"]:checked ~ header #site-nav li {
+    display: block;
+    width: 100%;
+    background: #333;
+    color: #fff;
+    font-size: 14px;
+    border-bottom: 1px solid #222;
+    padding-bottom: 7px;
+    padding-left: 20px;
+  }
+  input[type="checkbox"] ~ header #site-nav #site-nav-selected {
+    background: #222;
+  }
 }
 
-/* default */
-/*   max-width: 990px; */
-/*   no dropdowns */
-/*   fixedwidth archives sidebar */
-/*     sidebar hold space down the entire side of the page */
 
-/* less than 950 */
-/*   hamburger menu fullscreen dropdown */ 
-/*   topics dropdown fixed width */  
-/*   fixedwidth archives sidebar */
-/*     sidebar hold space down the entire side of the page */
+/* @media (max-width: 950px) { */
+/*   .header-title { */
+/*     padding-top: 40px; */
+/*   } */
+/*   /1* input[type="checkbox"]:checked ~ li { *1/ */ 
+/*   /1*   display: block; *1/ */
+/*   /1*   height: 200px; *1/ */
+/*   /1*   width: 200px; *1/ */
+/*   /1*   background: green; *1/ */
+/*   /1*   border: 8px solid purple; *1/ */
+/*   /1* } *1/ */
+/*   #site-menu-banner { */
+/*     display: block; */
+/*     position: absolute; */
+/*     background: #555; */
+/*     top: 0; */
+/*     text-indent: 0; */
+/*     width: 99.9%; */
+/*     margin-left: 0; */
+/*     font-size: 16px; */
+/*     color: #fff; */
+/*     padding: 0 20px; */
+/*     font-weight: bold; */
+/*     height: 40px; */
+/*     box-sizing: border-box; */
+/*   } */
+/*   #banner { */
+/*     display: block; */
+/*     position: relative; */
+/*     left: -20px; */
+/*     top: 40px; */
+/*     width: 104.4%; */
+/*     margin: 0; */
+/*   } */
+/*   #topics li { */
+/*     border-bottom: none; */
+/*     /1* text-indent: -9999px; *1/ */
+/*   } */
+/*   input[type="checkbox"] { */
+/*     opacity: 0; */
+/*   } */
+/*   input[type="checkbox"]:checked ~ li { */
+/*     display: block; */
+/*     position: relative; */
+/*     left: -20px; */
+/*     top: -147px; */
+/*     width: 101.1%; */
+/*     background: #333; */
+/*     box-sizing: border-box; */
+/*     text-indent: 0; */
+/*   } */
+/*   input[type="checkbox"]:checked ~ li#site-nav-selected { */
+/*     background: #000; */
+/*     color: #fff; */
+/*   } */  
 
-/* less than 768 */
-/*   same hamburger menu fullscreen dropdown */
-/*   topics dropwdown full width */ 
-/*   Radar header is smaller font */
-/*   social media pushed below Radar header */
+/*   label[for="toggle-topics"] { */
+/*     position: absolute; */
+/*     top: 8px; */
+/*     left: 18px; */
+/*     height: 26px; */
+/*     width: 86px; */
+/*     padding: 3px 0 0 30px; */
+/*     color: white; */
+/*     background: url('http://cdn.oreillystatic.com/radar/images/menu-btn.png') 0 0 no-repeat; */
+/*     z-index: 2; */
+/*   } */
+/*   aside { */
+/*     float: right; */
+/*     width: 300px; */ 
+/*   } */  
+/* } */
 
-/*   articles take of full width of the page */
+/* /1* default *1/ */
+/* /1*   max-width: 990px; *1/ */
+/* /1*   no dropdowns *1/ */
+/* /1*   fixedwidth archives sidebar *1/ */
+/* /1*     sidebar hold space down the entire side of the page *1/ */
 
-/*   footer is single column */
-/*   archives sidebar moves above the footer */
+/* /1* less than 950 *1/ */
+/* /1*   hamburger menu fullscreen dropdown *1/ */ 
+/* /1*   topics dropdown fixed width *1/ */  
+/* /1*   fixedwidth archives sidebar *1/ */
+/* /1*     sidebar hold space down the entire side of the page *1/ */
+
+/* /1* less than 768 *1/ */
+/* /1*   same hamburger menu fullscreen dropdown *1/ */
+/* /1*   topics dropwdown full width *1/ */ 
+/* /1*   Radar header is smaller font *1/ */
+/* /1*   social media pushed below Radar header *1/ */
+
+/* /1*   articles take of full width of the page *1/ */
+
+/* /1*   footer is single column *1/ */
+/* /1*   archives sidebar moves above the footer *1/ */
   
   
