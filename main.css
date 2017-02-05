@@ -47,7 +47,7 @@ header * {
 }
 .social-media-search {
   float: right;
-  margin-right: 22px;
+  /* margin-right: 22px; */
   width: 260px;
 }
 .social-media-search ul {
@@ -247,7 +247,7 @@ section h2 {
   margin-top: 5px;
 }
 .blog-preview {
-  width: 594px;
+  max-width: 594px;
 }
 a.full-blog-link {
   diaplay: inline-block;
@@ -269,7 +269,7 @@ section .section-social-media {
 }
 .blog-preview .full-width img {
   padding-top: 26px;
-  width: 100%;
+  max-width: 100%;
 }
 .blog-preview .float-right img {
   float: right;
@@ -426,8 +426,8 @@ footer {
 }
 #legal-contact {
   display: inline-block;
-  width: 240px;
-  margin: 13px 0 0 11px;
+  width: 255px;
+  margin: 13px 15px 0 11px;
 }
 #legal-contact p {
   font-size: 12px;
@@ -440,20 +440,25 @@ footer {
   padding-top: 9px;
   line-height: 130%;
 }
-table {
+#site-map {
   float: right;
-  width: 730px;
-  padding: 14px 0 0 36px;
+  width: 665px;
+  padding-top: 10px;
   font-size: 12px;
   text-align: left
 }
-table th, table td {
-  line-height: 130%;
-  padding-left: 22px;
+#site-map ul {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 24px;
 }
-table th {
-  padding-bottom: 4px;
+#site-map ul:last-of-type {
+  margin-right: 0;
 }
+#site-map li {
+  padding-top: 5px;
+}
+
 /* ************************************* */
 /* media queries */
 /* ************************************* */
@@ -474,6 +479,27 @@ table th {
   .social-media-search {
     margin-right: 24px;
   }  
+  footer {
+    height: 450px;
+  }
+  #footer-banner ul {
+    float: left;
+    padding: 16px 0 0 30px;
+    height: 32px;
+  }
+  #legal-contact {
+    margin: 20px 0 4px 24px;
+  }
+  #site-map {
+    margin: 0 0 12px 24px;
+    width: 100%;
+  }
+  #site-map li:first-of-type {
+    padding-bottom: 4px;
+  }
+  #site-map ul:first-of-type {
+    margin-left: 24px;
+  }
 
   /* menu toggle */
  
@@ -490,11 +516,18 @@ table th {
     width: 100%;
     position: absolute;
     top: 58px;
+    z-index: 3;
   }
   #site-nav ul {
     display: none;
     border-top: 1px solid #222;
   }
+  input[id="menu-toggle"]:checked ~ header {
+    margin-top: 205px; 
+  }
+  input[id="menu-toggle"]:checked ~ header nav#topics {
+    top: 374px;
+  }  
   input[id="menu-toggle"]:checked ~ header #site-nav ul {
     top: -20px;
     display: block;
@@ -581,6 +614,9 @@ table th {
   .social-media-search {
     margin-right: 22px;
   }
+  .blog-preview {
+    max-width: 100%;
+  }
   main {
     margin: 17px 24px 0 24px;
   }
@@ -600,22 +636,28 @@ table th {
     background: #bbb url('images/topics-down.png') 0 0 no-repeat;
     background-size: 89px;
   }
+  input[id="menu-toggle"]:checked ~ header nav#topics {
+    top: 444px;
+  }  
   input[id="topics-toggle"]:checked ~ nav#topics {
     top: 240px;
     left: 24px;
     background: #bbb url('images/topics-up.png') 0 0 no-repeat;
     background-size: 89px;
   }  
-  #footer-banner ul {
-    float: left;
-    padding: 16px 0 0 26px;
-    height: 32px;
+  footer {
+    height: 936px;
   }
-  #legal-contact {
-    margin: 18px 0 0 18px;
-  }
-  footer table td {
+  footer #site-map ul {
     display: block;
-    width: 100%;
+    margin-left: 24px;
+    margin-top: 20px;
+  }
+  footer #site-map ul:first-of-type {
+    margin-top: 0;
   }
 }
+
+
+/* change selected background */
+/* make smallest media query topics full width */
