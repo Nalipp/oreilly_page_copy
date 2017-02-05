@@ -26,7 +26,7 @@ header * {
 }
 #banner {
   height: 24px;
-  margin-top: -34px;
+  margin-top: -35px;
   background: #ba132e url('http://cdn.oreillystatic.com/radar/images/oreilly_logo_white.png') 27px 6px no-repeat;
 }
 #title {
@@ -43,7 +43,7 @@ header * {
 }
 .social-media-search {
   float: right;
-  width: 300px 
+  width: 300px; 
 }
 .social-media-search ul {
   text-align: right;
@@ -346,6 +346,7 @@ select {
     display: block;
     font-size: 12px;
     letter-spacing: -0.4px;
+    height: 19px;
     line-height: 140%;
     margin-top: 10px;
     border: 1px solid #ccc;
@@ -458,17 +459,29 @@ label {
   display: none;
 }
 @media (max-width: 950px) {
-  label {
+  #banner {
+    margin-top: 0;
+  }
+  main {
+    margin: 0 30px;
+  }
+  header {
+    height: 186px;
+  }
+  .social-media-search {
+    margin-right: 28px;
+  }  
+
+  /* menu toggle */
+ 
+  label[for="menu-toggle"] {
     display: inline-block;
     font-size: 16px;
     font-weight: bold;
     color: white;
-    width: 100%;
+    width: 94.7%;
     padding: 11px 0 10px 50px;
     background: #555 url('http://cdn.oreillystatic.com/radar/images/menu-btn.png') 20px 8px no-repeat;
-  }
-  input[type="checkbox"]:checked ~ header {
-    margin-top: 204px;
   }
   #site-nav {
     width: 100%;
@@ -479,12 +492,12 @@ label {
     display: none;
     border-top: 1px solid #222;
   }
-  input[type="checkbox"]:checked ~ header #site-nav ul {
+  input[id="menu-toggle"]:checked ~ header #site-nav ul {
     top: -20px;
     display: block;
     width: 100%
   }
-  input[type="checkbox"]:checked ~ header #site-nav li {
+  input[id="menu-toggle"]:checked ~ header #site-nav li {
     display: block;
     width: 100%;
     background: #333;
@@ -494,106 +507,49 @@ label {
     padding-bottom: 7px;
     padding-left: 20px;
   }
-  input[type="checkbox"] ~ header #site-nav #site-nav-selected {
+  input[type="menu-toggle"] ~ header #site-nav-selected {
     background: #222;
   }
+
+  /* topics toggle */
+
+  #topics ul {
+    display: none;
+  }
+  input[id="topics-toggle"]:checked ~ #topics ul {
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -14px;
+    width: 250px;
+    height: 200px;
+    background: green;
+  }
+  label[for="topics-toggle"] {
+    display: block;
+    background: transparent;
+    width: 130px;
+    height: 50px;
+    z-index: 2;
+  }
+  nav#topics {
+    position: absolute;
+    top: 170px;
+    left: 30px;
+    width: 93.5%;
+    height: 29px;
+    background: #eee url('images/topics-down.png') 0 0 no-repeat;
+    background-size: 10.4%;
+    z-index: -1;
+  }
+  input[id="topics-toggle"]:checked ~ nav#topics {
+    position: absolute;
+    top: 170px;
+    left: 30px;
+    width: 90px;
+    height: 90px;
+    background: url('images/topics-up.png') 0 0 no-repeat;
+    background-size: 100%;
+  }  
 }
-
-
-/* @media (max-width: 950px) { */
-/*   .header-title { */
-/*     padding-top: 40px; */
-/*   } */
-/*   /1* input[type="checkbox"]:checked ~ li { *1/ */ 
-/*   /1*   display: block; *1/ */
-/*   /1*   height: 200px; *1/ */
-/*   /1*   width: 200px; *1/ */
-/*   /1*   background: green; *1/ */
-/*   /1*   border: 8px solid purple; *1/ */
-/*   /1* } *1/ */
-/*   #site-menu-banner { */
-/*     display: block; */
-/*     position: absolute; */
-/*     background: #555; */
-/*     top: 0; */
-/*     text-indent: 0; */
-/*     width: 99.9%; */
-/*     margin-left: 0; */
-/*     font-size: 16px; */
-/*     color: #fff; */
-/*     padding: 0 20px; */
-/*     font-weight: bold; */
-/*     height: 40px; */
-/*     box-sizing: border-box; */
-/*   } */
-/*   #banner { */
-/*     display: block; */
-/*     position: relative; */
-/*     left: -20px; */
-/*     top: 40px; */
-/*     width: 104.4%; */
-/*     margin: 0; */
-/*   } */
-/*   #topics li { */
-/*     border-bottom: none; */
-/*     /1* text-indent: -9999px; *1/ */
-/*   } */
-/*   input[type="checkbox"] { */
-/*     opacity: 0; */
-/*   } */
-/*   input[type="checkbox"]:checked ~ li { */
-/*     display: block; */
-/*     position: relative; */
-/*     left: -20px; */
-/*     top: -147px; */
-/*     width: 101.1%; */
-/*     background: #333; */
-/*     box-sizing: border-box; */
-/*     text-indent: 0; */
-/*   } */
-/*   input[type="checkbox"]:checked ~ li#site-nav-selected { */
-/*     background: #000; */
-/*     color: #fff; */
-/*   } */  
-
-/*   label[for="toggle-topics"] { */
-/*     position: absolute; */
-/*     top: 8px; */
-/*     left: 18px; */
-/*     height: 26px; */
-/*     width: 86px; */
-/*     padding: 3px 0 0 30px; */
-/*     color: white; */
-/*     background: url('http://cdn.oreillystatic.com/radar/images/menu-btn.png') 0 0 no-repeat; */
-/*     z-index: 2; */
-/*   } */
-/*   aside { */
-/*     float: right; */
-/*     width: 300px; */ 
-/*   } */  
-/* } */
-
-/* /1* default *1/ */
-/* /1*   max-width: 990px; *1/ */
-/* /1*   no dropdowns *1/ */
-/* /1*   fixedwidth archives sidebar *1/ */
-/* /1*     sidebar hold space down the entire side of the page *1/ */
-
-/* /1* less than 950 *1/ */
-/* /1*   hamburger menu fullscreen dropdown *1/ */ 
-/* /1*   topics dropdown fixed width *1/ */  
-/* /1*   fixedwidth archives sidebar *1/ */
-/* /1*     sidebar hold space down the entire side of the page *1/ */
-
-/* /1* less than 768 *1/ */
-/* /1*   same hamburger menu fullscreen dropdown *1/ */
-/* /1*   topics dropwdown full width *1/ */ 
-/* /1*   Radar header is smaller font *1/ */
-/* /1*   social media pushed below Radar header *1/ */
-
-/* /1*   articles take of full width of the page *1/ */
-
-/* /1*   footer is single column *1/ */
-/* /1*   archives sidebar moves above the footer *1/ */
-  
   
