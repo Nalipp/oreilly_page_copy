@@ -15,6 +15,10 @@ a {
 a:hover {
   text-decoration: underline;
 }
+input[type="checkbox"],
+label {
+  display: none;
+}
 /* ************************************* */
 /* header */
 /* ************************************* */
@@ -32,7 +36,7 @@ header * {
 #title {
   display: inline-block;
   height: 100px;
-  width: 490px;
+  width: 470px;
   background: url("http://cdn.oreillystatic.com/radar/images/radar_tagline.png") 27px 23px no-repeat;
 }
 .wrapper {
@@ -43,7 +47,8 @@ header * {
 }
 .social-media-search {
   float: right;
-  width: 300px; 
+  margin-right: 22px;
+  width: 260px;
 }
 .social-media-search ul {
   text-align: right;
@@ -179,9 +184,8 @@ main h5 {
 /* ************************************* */
 article {
   float: left;
-  width: 66%;
+  width: 65%;
   box-sizing: border-box;
-  padding-right: 14px;
 }
 p {
   padding-top: 14px;
@@ -339,7 +343,7 @@ blockquote {
 /* ************************************* */
 aside {
   float: right;
-  width: 320px; 
+  width: 33%; 
   box-sizing: border-box;
 }
 select {
@@ -454,10 +458,9 @@ table th {
 /* media queries */
 /* ************************************* */
 
-input[type="checkbox"],
-label {
-  display: none;
-}
+/* ************************************* */
+/* max 950px */
+
 @media (max-width: 950px) {
   #banner {
     margin-top: 0;
@@ -469,7 +472,7 @@ label {
     height: 186px;
   }
   .social-media-search {
-    margin-right: 28px;
+    margin-right: 24px;
   }  
 
   /* menu toggle */
@@ -516,17 +519,9 @@ label {
   #topics ul {
     display: none;
   }
-  input[id="topics-toggle"]:checked ~ #topics ul {
-    display: block;
-    position: absolute;
-    top: -5px;
-    left: -14px;
-    width: 250px;
-    height: 200px;
-    background: green;
-  }
   label[for="topics-toggle"] {
     display: block;
+    position: relative;
     background: transparent;
     width: 130px;
     height: 50px;
@@ -539,17 +534,88 @@ label {
     width: 93.5%;
     height: 29px;
     background: #eee url('images/topics-down.png') 0 0 no-repeat;
-    background-size: 10.4%;
-    z-index: -1;
+    background-size: 89px;
+    z-index: 1;
   }
   input[id="topics-toggle"]:checked ~ nav#topics {
     position: absolute;
     top: 170px;
     left: 30px;
-    width: 90px;
-    height: 90px;
-    background: url('images/topics-up.png') 0 0 no-repeat;
-    background-size: 100%;
+    width: 93.5%;
+    height: 29px;
+    background: #eee url('images/topics-up.png') 0 0 no-repeat;
+    background-size: 89px;
   }  
+  input[id="topics-toggle"]:checked ~ #topics ul {
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -14px;
+    width: 250px;
+    height: 200px;
+    background: rgba(0,0,0,.8);
+  }
+  input[id="topics-toggle"]:checked ~ #topics li {
+    display: block;
+    font-size: 14px;
+    color: #fff; 
+    padding: 6px 12px;
+    margin: 0;
+    border-bottom: 1px solid #fff;
+  }
 }
-  
+
+
+/* ************************************* */
+/* max 767px */
+
+@media (max-width: 767px) {
+  header {
+    height: 238px;
+  }
+  #title {
+    display: block;
+    background-size: 64%;
+    height: 74px;
+  }
+  .social-media-search {
+    margin-right: 22px;
+  }
+  main {
+    margin: 17px 24px 0 24px;
+  }
+  article {
+    display: block;
+    width: 100%;
+  }
+  aside {
+    display: block;
+    width: 100%;
+    padding-top: 16px;
+    padding-bottom: 20px;
+  }
+  nav#topics {
+    top: 240px;
+    left: 24px;
+    background: #bbb url('images/topics-down.png') 0 0 no-repeat;
+    background-size: 89px;
+  }
+  input[id="topics-toggle"]:checked ~ nav#topics {
+    top: 240px;
+    left: 24px;
+    background: #bbb url('images/topics-up.png') 0 0 no-repeat;
+    background-size: 89px;
+  }  
+  #footer-banner ul {
+    float: left;
+    padding: 16px 0 0 26px;
+    height: 32px;
+  }
+  #legal-contact {
+    margin: 18px 0 0 18px;
+  }
+  footer table td {
+    display: block;
+    width: 100%;
+  }
+}
