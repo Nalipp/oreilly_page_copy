@@ -47,7 +47,6 @@ header * {
 }
 .social-media-search {
   float: right;
-  /* margin-right: 22px; */
   width: 260px;
 }
 .social-media-search ul {
@@ -203,12 +202,20 @@ article ul {
 }
 article li {
   max-width: 500px;
+  padding-left: 19px;
 }
 article li:before {
   content: '\25AA';
   font-size: 17.1px;
   vertical-align: -1px;
+  margin-left: -19px;
   padding-right: 9px;
+}
+section ul.short-list {
+  margin-left: 24px;
+}
+section ul.short-list li {
+  max-width: 95%;
 }
 section#featured #section-social-media {
   padding-top: 0;
@@ -267,6 +274,9 @@ section .section-social-media {
   font-size: 15px;
   font-style: italic;
 }
+.full-width {
+  text-align: center;
+}
 .blog-preview .full-width img {
   padding-top: 26px;
   max-width: 100%;
@@ -297,6 +307,9 @@ section .section-social-media {
 }
 .bold {
   font-weight: bold;
+}
+.numbered-list .bold {
+  padding-left: 20px;
 }
 figcaption {
   text-align: center;
@@ -463,8 +476,7 @@ footer {
 /* media queries */
 /* ************************************* */
 
-/* ************************************* */
-/* max 950px */
+/* media max 950px */
 
 @media (max-width: 950px) {
   #banner {
@@ -507,7 +519,7 @@ footer {
     display: block;
     font-size: 16px;
     font-weight: bold;
-    color: white;
+    color: #fff;
     padding: 11px 0 10px 50px;
     background: #555 url('http://cdn.oreillystatic.com/radar/images/menu-btn.png') 20px 8px no-repeat;
   }
@@ -560,6 +572,13 @@ footer {
     height: 50px;
     z-index: 2;
   }
+  input[id="menu-toggle"]:checked ~ 
+  input[id="topics-toggle"]:checked ~ header nav#topics {
+    top: 374px;
+  }
+  input[id="menu-toggle"]:checked ~ label[for="topics-toggle"] {
+    top: 365px;
+  }
   nav#topics {
     position: absolute;
     top: 170px;
@@ -598,9 +617,7 @@ footer {
   }
 }
 
-
-/* ************************************* */
-/* max 767px */
+/* media-max 767px */
 
 @media (max-width: 767px) {
   header {
