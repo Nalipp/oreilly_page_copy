@@ -504,11 +504,10 @@ footer {
   /* menu toggle */
  
   label[for="menu-toggle"] {
-    display: inline-block;
+    display: block;
     font-size: 16px;
     font-weight: bold;
     color: white;
-    width: 94.7%;
     padding: 11px 0 10px 50px;
     background: #555 url('http://cdn.oreillystatic.com/radar/images/menu-btn.png') 20px 8px no-repeat;
   }
@@ -543,7 +542,7 @@ footer {
     padding-bottom: 7px;
     padding-left: 20px;
   }
-  input[type="menu-toggle"] ~ header #site-nav-selected {
+  input[id="menu-toggle"]:checked ~ header #site-nav li#site-nav-selected {
     background: #222;
   }
 
@@ -678,8 +677,3 @@ footer {
     margin-top: 0;
   }
 }
-
-
-/* change selected background */
-/* make smallest media query topics full width */
-/* run html validation! */
